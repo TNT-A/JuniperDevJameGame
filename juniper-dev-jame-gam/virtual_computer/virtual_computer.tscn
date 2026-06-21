@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://caul6kq40kc7q"]
+
+[node name="VirtualComputer" type="Node2D"]
+
+[node name="ComputerSprite" type="Sprite2D" parent="."]
+
+[node name="OfficePage" type="Node2D" parent="."]
+
+[node name="CasinoPage" type="Node2D" parent="."]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bla13tq7efegi"]
+
+[ext_resource type="PackedScene" uid="uid://caul6kq40kc7q" path="res://virtual_computer/virtual_computer.tscn" id="1_mx6ys"]
+[ext_resource type="PackedScene" uid="uid://dd51aaokbc7td" path="res://office_background/office_background.tscn" id="2_q7vcu"]
+
+[node name="GameManager" type="Node2D"]
+
+[node name="VirtualComputer" parent="." instance=ExtResource("1_mx6ys")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="OfficeBackground" parent="CanvasLayer" instance=ExtResource("2_q7vcu")]
