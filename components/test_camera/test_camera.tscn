@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://br0i4uswurnsr"]
+
+[ext_resource type="Script" uid="uid://2y5slp5wvyjy" path="res://components/test_camera/camera_2d.gd" id="1_aumej"]
+[ext_resource type="Texture2D" uid="uid://daxbnknq24urr" path="res://icon.svg" id="2_2eq7h"]
+
+[node name="test_camera" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(320, 180)
+script = ExtResource("1_aumej")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, 184)
+texture = ExtResource("2_2eq7h")

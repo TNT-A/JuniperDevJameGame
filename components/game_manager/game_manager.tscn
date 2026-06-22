@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bla13tq7efegi"]
+
+[ext_resource type="PackedScene" uid="uid://caul6kq40kc7q" path="res://components/virtual_computer/virtual_computer.tscn" id="1_05qyu"]
+[ext_resource type="PackedScene" uid="uid://dd51aaokbc7td" path="res://components/office_background/office_background.tscn" id="2_ikqet"]
+[ext_resource type="PackedScene" uid="uid://br0i4uswurnsr" path="res://components/test_camera/test_camera.tscn" id="3_ikqet"]
+
+[node name="GameManager" type="Node2D"]
+
+[node name="VirtualComputer" parent="." instance=ExtResource("1_05qyu")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="OfficeBackground" parent="CanvasLayer" instance=ExtResource("2_ikqet")]
+
+[node name="test_camera" parent="." instance=ExtResource("3_ikqet")]
