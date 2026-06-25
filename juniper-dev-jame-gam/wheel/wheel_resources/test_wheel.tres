@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WheelResource" load_steps=3 format=3 uid="uid://dy55uw1q2ul70"]
+
+[ext_resource type="Script" uid="uid://8ot61bisegid" path="res://wheel/wheel_resources/wheel_resource.gd" id="1_qornt"]
+[ext_resource type="Texture2D" uid="uid://bw0epojdbyjtk" path="res://sprites/wheel placeholder.png" id="2_qdrwp"]
+
+[resource]
+script = ExtResource("1_qornt")
+wheel_name = "Test Wheel"
+sound_strenth = 0
+metadata/_custom_type_script = "uid://8ot61bisegid"
