@@ -1,0 +1,107 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfy1xusvwe7hq"]
+
+[ext_resource type="Script" uid="uid://dvgjc40srdxc" path="res://wheel/wheel_options.gd" id="1_ex0wb"]
+[ext_resource type="Theme" uid="uid://dyalgn1hkhgf0" path="res://themes/casino.tres" id="1_qqp47"]
+[ext_resource type="Texture2D" uid="uid://bw0epojdbyjtk" path="res://sprites/wheel placeholder.png" id="1_wfqs3"]
+[ext_resource type="Script" uid="uid://c3n7ypdxl7gbf" path="res://wheel/button.gd" id="3_k0e81"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ex0wb"]
+font_size = 24
+font_color = Color(0.19348538, 0.60005414, 9.62615e-07, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kbuo6"]
+line_spacing = -4.0
+font_size = 20
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="WheelOption" type="Control"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(64, 64)
+script = ExtResource("1_ex0wb")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+theme = ExtResource("1_qqp47")
+
+[node name="WheelTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 124.0
+offset_bottom = 124.0
+pivot_offset = Vector2(60, 60)
+texture = ExtResource("1_wfqs3")
+expand_mode = 1
+
+[node name="Banner" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 38.0
+offset_bottom = 38.0
+
+[node name="BannerCutter" type="ColorRect" parent="Banner"]
+clip_contents = true
+layout_mode = 0
+offset_right = 130.0
+offset_bottom = 130.0
+color = Color(1, 1, 1, 0)
+
+[node name="OutlineRect" type="ColorRect" parent="Banner/BannerCutter"]
+clip_contents = true
+layout_mode = 0
+offset_left = 202.13754
+offset_top = -37.908623
+offset_right = 239.26572
+offset_bottom = 320.62088
+rotation = 0.7853982
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Banner/BannerCutter/OutlineRect"]
+layout_mode = 0
+offset_left = 4.038208
+offset_top = 5.6568604
+offset_right = 33.465187
+offset_bottom = 325.74692
+color = Color(0.2231029, 0.2231029, 0.22310287, 1)
+
+[node name="MoneyLabel" type="Label" parent="Banner"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 101.999985
+offset_right = 119.0
+offset_bottom = 136.0
+rotation = -0.7853982
+text = "$100"
+label_settings = SubResource("LabelSettings_ex0wb")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 43.0
+
+[node name="Label" type="Label" parent="CenterContainer"]
+layout_mode = 2
+text = "Crazy Wheel"
+label_settings = SubResource("LabelSettings_kbuo6")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+script = ExtResource("3_k0e81")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
