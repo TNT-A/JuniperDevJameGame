@@ -1,0 +1,208 @@
+[gd_scene load_steps=16 format=3 uid="uid://b4q33k7k55iyx"]
+
+[ext_resource type="FontFile" uid="uid://dolt1l605mdvm" path="res://sprites/fonts/Pixel Strike.otf" id="1_og173"]
+[ext_resource type="Script" uid="uid://ccnvd1mnxvj7j" path="res://start_screen/start_screen.gd" id="1_q8jnp"]
+[ext_resource type="Texture2D" uid="uid://cxseuer5na2ym" path="res://sprites/rainbow_chip.png" id="2_2bupo"]
+[ext_resource type="PackedScene" uid="uid://day22k4m782ev" path="res://wheel/wheel.tscn" id="2_c3q8q"]
+[ext_resource type="Resource" uid="uid://u3dwo8pl45mn" path="res://wheel/wheel_resources/title.tres" id="3_5hd7j"]
+[ext_resource type="Texture2D" uid="uid://civp1de3ky78m" path="res://sprites/window_bar.png" id="3_c3q8q"]
+[ext_resource type="FontFile" uid="uid://uorwde0m5i0s" path="res://sprites/fonts/ari-w9500-bold.ttf" id="4_2bupo"]
+[ext_resource type="Texture2D" uid="uid://bbcn0bke7nquo" path="res://sprites/search_bar.png" id="6_5vdfa"]
+[ext_resource type="Texture2D" uid="uid://dp0ikre2c52on" path="res://sprites/coworker_placeholder.png" id="8_mja4r"]
+[ext_resource type="Texture2D" uid="uid://cqd7116q2u0al" path="res://sprites/coworker_watching_placeholder.png" id="9_a1tsa"]
+[ext_resource type="AudioStream" uid="uid://wl1jrsg0liy0" path="res://sprites/sounds/hehe gamble.mp3" id="11_ssqdr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5vdfa"]
+line_spacing = -12.0
+font = ExtResource("1_og173")
+font_size = 64
+font_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+outline_size = 24
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_c3q8q"]
+line_spacing = 2.0
+font = ExtResource("4_2bupo")
+font_size = 11
+font_color = Color(0.74509805, 0.74509805, 0.74509805, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5hd7j"]
+font = ExtResource("4_2bupo")
+font_size = 11
+font_color = Color(0.74509805, 0.74509805, 0.74509805, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mja4r"]
+font = ExtResource("4_2bupo")
+font_size = 11
+font_color = Color(0.74509805, 0.74509805, 0.74509805, 1)
+
+[node name="StartScreen" type="Node2D"]
+script = ExtResource("1_q8jnp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 666.0
+offset_bottom = 353.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 51.0
+offset_right = 612.0
+offset_bottom = 199.0
+text = "Bet the Job 
+   n BLACK!"
+label_settings = SubResource("LabelSettings_5vdfa")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 13.0
+offset_top = 159.0
+offset_right = 61.0
+offset_bottom = 191.0
+mouse_filter = 2
+texture = ExtResource("2_2bupo")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_top = -10.0
+offset_right = 48.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("2_2bupo")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_top = -10.0
+offset_right = 48.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("2_2bupo")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_top = 334.0
+offset_right = 640.0
+offset_bottom = 360.0
+mouse_filter = 2
+texture = ExtResource("3_c3q8q")
+
+[node name="TimeLabel" type="Label" parent="."]
+offset_left = 586.0
+offset_top = 336.0
+offset_right = 806.0
+offset_bottom = 347.0
+text = "9:00 AM"
+label_settings = SubResource("LabelSettings_c3q8q")
+
+[node name="TimeLabel2" type="Label" parent="."]
+offset_left = 579.0
+offset_top = 348.0
+offset_right = 799.0
+offset_bottom = 359.0
+text = "W/00/RK"
+label_settings = SubResource("LabelSettings_c3q8q")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_right = 640.0
+offset_bottom = 38.0
+mouse_filter = 2
+texture = ExtResource("6_5vdfa")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 6.0
+offset_right = 260.0
+offset_bottom = 29.0
+text = "https://www.GAMBLEMORE.com"
+label_settings = SubResource("LabelSettings_5hd7j")
+
+[node name="Label2" type="Label" parent="Label2"]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 308.0
+offset_right = 771.0
+offset_bottom = 331.0
+text = "(Click the wheel to start GAMBLING!!!!!!!)"
+label_settings = SubResource("LabelSettings_mja4r")
+
+[node name="Wheel" parent="." instance=ExtResource("2_c3q8q")]
+offset_left = 374.0
+offset_top = 54.0
+offset_right = 630.0
+offset_bottom = 310.0
+mouse_filter = 2
+result_resource = ExtResource("3_5hd7j")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 374.0
+offset_top = 55.0
+offset_right = 631.0
+offset_bottom = 310.0
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+offset_top = 269.0
+offset_right = 64.0
+offset_bottom = 333.0
+mouse_filter = 2
+texture = ExtResource("8_mja4r")
+
+[node name="TextureRect4" type="TextureRect" parent="TextureRect4"]
+layout_mode = 0
+offset_left = 63.0
+offset_right = 127.0
+offset_bottom = 64.0
+mouse_filter = 2
+texture = ExtResource("8_mja4r")
+
+[node name="TextureRect4" type="TextureRect" parent="TextureRect4/TextureRect4"]
+layout_mode = 0
+offset_left = 62.0
+offset_right = 126.0
+offset_bottom = 64.0
+mouse_filter = 2
+texture = ExtResource("8_mja4r")
+
+[node name="TextureRect5" type="TextureRect" parent="TextureRect4"]
+layout_mode = 0
+offset_left = 188.0
+offset_right = 252.0
+offset_bottom = 64.0
+mouse_filter = 2
+texture = ExtResource("8_mja4r")
+
+[node name="TextureRect4" type="TextureRect" parent="TextureRect4/TextureRect5"]
+layout_mode = 0
+offset_left = 63.0
+offset_right = 127.0
+offset_bottom = 64.0
+mouse_filter = 2
+texture = ExtResource("8_mja4r")
+
+[node name="TextureRect4" type="TextureRect" parent="TextureRect4/TextureRect5/TextureRect4"]
+layout_mode = 0
+offset_left = 62.0
+offset_right = 126.0
+offset_bottom = 64.0
+mouse_filter = 2
+texture = ExtResource("8_mja4r")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect4/TextureRect5/TextureRect4/TextureRect4"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = -1.0
+offset_right = 53.0
+offset_bottom = 39.0
+mouse_filter = 2
+texture = ExtResource("9_a1tsa")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_ssqdr")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -20.0
+offset_top = -17.0
+offset_right = 767.0
+offset_bottom = 448.0
+mouse_filter = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

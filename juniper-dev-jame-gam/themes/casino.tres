@@ -1,4 +1,7 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dyalgn1hkhgf0"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dyalgn1hkhgf0"]
+
+[ext_resource type="FontFile" uid="uid://uorwde0m5i0s" path="res://sprites/fonts/ari-w9500-bold.ttf" id="1_3r4vs"]
+[ext_resource type="FontFile" uid="uid://cpejsrxjmbovc" path="res://sprites/fonts/ari-w9500.ttf" id="2_l3cag"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqp47"]
 bg_color = Color(0.14767182, 0.14767179, 0.14767179, 1)
@@ -12,5 +15,34 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3r4vs"]
+bg_color = Color(0.88235295, 0.88235295, 0.88235295, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l3cag"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kisc0"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.88235295, 0.88235295, 0.88235295, 1)
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 100
+shadow_offset = Vector2(10, 10)
+
 [resource]
+Label/fonts/font = ExtResource("1_3r4vs")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_qqp47")
+ProgressBar/colors/font_color = Color(0.45452392, 0.45452434, 0.45452422, 1)
+ProgressBar/font_sizes/font_size = 11
+ProgressBar/fonts/font = ExtResource("1_3r4vs")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_3r4vs")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_l3cag")
+TextEdit/font_sizes/font_size = 11
+TextEdit/fonts/font = ExtResource("2_l3cag")
+TextEdit/styles/normal = SubResource("StyleBoxFlat_kisc0")

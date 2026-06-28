@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="WheelResource" load_steps=7 format=3 uid="uid://dp0hkqcnkprve"]
+
+[ext_resource type="Texture2D" uid="uid://bi1d5s34gw5c6" path="res://sprites/blue_chip.png" id="2_sru87"]
+[ext_resource type="Texture2D" uid="uid://dobwi5jr07err" path="res://sprites/yellow_chip.png" id="2_tfc86"]
+[ext_resource type="Texture2D" uid="uid://d22cwd4s6ox8s" path="res://sprites/black_chip.png" id="3_01lnl"]
+[ext_resource type="Texture2D" uid="uid://bboy8mqvva6iy" path="res://sprites/blank_chip.png" id="3_tfc86"]
+[ext_resource type="Script" uid="uid://8ot61bisegid" path="res://wheel/wheel_resources/wheel_resource.gd" id="4_01lnl"]
+[ext_resource type="Texture2D" uid="uid://byoj4xgvwpcpu" path="res://sprites/casual_gambling.png" id="6_t043i"]
+
+[resource]
+script = ExtResource("4_01lnl")
+wheel_texture = ExtResource("6_t043i")
+detail_texture_1 = ExtResource("2_sru87")
+detail_texture_2 = ExtResource("2_tfc86")
+detail_texture_3 = ExtResource("3_01lnl")
+detail_info_1 = " = +25$"
+detail_info_2 = " = +10$"
+detail_info_3 = "= +30$"
+wheel_name = "Casual 
+Gambling"
+wheel_price = 15
+wheel_results = Array[Array]([["plus", 25], ["plus", 10], ["plus", 25], ["plus", 25], ["plus", 25], ["plus", 10], ["plus", 25], ["plus", 25]])
+metadata/_custom_type_script = "uid://8ot61bisegid"

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="WheelResource" load_steps=7 format=3 uid="uid://cf2m1gtgur4m2"]
+
+[ext_resource type="Texture2D" uid="uid://dobwi5jr07err" path="res://sprites/yellow_chip.png" id="1_63st5"]
+[ext_resource type="Texture2D" uid="uid://rw6lescfnjjk" path="res://sprites/red_chip.png" id="1_d2usm"]
+[ext_resource type="Texture2D" uid="uid://cvjunp2awchr6" path="res://sprites/green_chip.png" id="2_0ompx"]
+[ext_resource type="Script" uid="uid://8ot61bisegid" path="res://wheel/wheel_resources/wheel_resource.gd" id="4_kqpqe"]
+[ext_resource type="Texture2D" uid="uid://d22cwd4s6ox8s" path="res://sprites/black_chip.png" id="4_ll5ca"]
+[ext_resource type="Texture2D" uid="uid://f34hdhsi5ijt" path="res://sprites/risky_business.png" id="6_frg1p"]
+
+[resource]
+script = ExtResource("4_kqpqe")
+wheel_texture = ExtResource("6_frg1p")
+detail_texture_1 = ExtResource("1_63st5")
+detail_texture_2 = ExtResource("2_0ompx")
+detail_texture_3 = ExtResource("1_d2usm")
+detail_texture_4 = ExtResource("4_ll5ca")
+detail_info_1 = " = +15$"
+detail_info_2 = " = +0$"
+detail_info_3 = " = x1/2$"
+detail_info_4 = " = +50$"
+wheel_name = "Risky
+Business"
+wheel_price = 5
+wheel_results = Array[Array]([["plus", 15], ["plus", 15], ["plus", 15], ["plus", 0], ["div", 2], ["div", 2], ["div", 2], ["plus", 50]])
+metadata/_custom_type_script = "uid://8ot61bisegid"

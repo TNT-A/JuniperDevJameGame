@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsvilml53wjf2"
+path="res://.godot/imported/maybe wheel click.mp3-f92fbf45b4ef132878e81c7469a860ac.mp3str"
+
+[deps]
+
+source_file="res://sprites/sounds/maybe wheel click.mp3"
+dest_files=["res://.godot/imported/maybe wheel click.mp3-f92fbf45b4ef132878e81c7469a860ac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

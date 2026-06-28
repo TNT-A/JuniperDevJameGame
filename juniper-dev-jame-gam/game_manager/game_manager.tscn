@@ -1,17 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bla13tq7efegi"]
+[gd_scene load_steps=3 format=3 uid="uid://bla13tq7efegi"]
 
 [ext_resource type="PackedScene" uid="uid://caul6kq40kc7q" path="res://virtual_computer/virtual_computer.tscn" id="1_mx6ys"]
 [ext_resource type="Script" uid="uid://0px0gaqjid6s" path="res://game_manager/game_manager.gd" id="1_pnley"]
-[ext_resource type="PackedScene" uid="uid://svkcr8ypby1r" path="res://Cubicle/cubicle.tscn" id="1_q7vcu"]
-[ext_resource type="PackedScene" uid="uid://dd51aaokbc7td" path="res://office_background/office_background.tscn" id="2_q7vcu"]
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource("1_pnley")
 
-[node name="Cubicle" parent="." instance=ExtResource("1_q7vcu")]
-
 [node name="VirtualComputer" parent="." instance=ExtResource("1_mx6ys")]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="OfficeBackground" parent="CanvasLayer" instance=ExtResource("2_q7vcu")]
