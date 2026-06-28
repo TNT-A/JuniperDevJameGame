@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://qjt4kjk7i422"
+path="res://.godot/imported/long drumroll.mp3-450118145d8347a0021d01ab85a5c87b.mp3str"
+
+[deps]
+
+source_file="res://sprites/sounds/long drumroll.mp3"
+dest_files=["res://.godot/imported/long drumroll.mp3-450118145d8347a0021d01ab85a5c87b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

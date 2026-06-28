@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="WheelResource" load_steps=7 format=3 uid="uid://dieb5xme5w4v1"]
+
+[ext_resource type="Texture2D" uid="uid://rw6lescfnjjk" path="res://sprites/red_chip.png" id="1_3jrux"]
+[ext_resource type="Texture2D" uid="uid://d22cwd4s6ox8s" path="res://sprites/black_chip.png" id="1_bmh8q"]
+[ext_resource type="Texture2D" uid="uid://cvjunp2awchr6" path="res://sprites/green_chip.png" id="3_p742b"]
+[ext_resource type="Texture2D" uid="uid://bboy8mqvva6iy" path="res://sprites/blank_chip.png" id="3_tvbwp"]
+[ext_resource type="Script" uid="uid://8ot61bisegid" path="res://wheel/wheel_resources/wheel_resource.gd" id="4_p742b"]
+[ext_resource type="Texture2D" uid="uid://dlohjqfgqr0ho" path="res://sprites/the_check_point.png" id="6_bi08a"]
+
+[resource]
+script = ExtResource("4_p742b")
+wheel_texture = ExtResource("6_bi08a")
+detail_texture_2 = ExtResource("3_p742b")
+detail_texture_3 = ExtResource("1_bmh8q")
+detail_info_1 = " = +2000$"
+detail_info_2 = " = *2$"
+detail_info_3 = " = +1000$"
+wheel_name = "The Check
+Point"
+wheel_price = 1500
+wheel_results = Array[Array]([["plus", 2000], ["plus", 2000], ["plus", 2000], ["mult", 2], ["plus", 1000], ["plus", 1000], ["plus", 1000], ["plus", 1000]])
+metadata/_custom_type_script = "uid://8ot61bisegid"

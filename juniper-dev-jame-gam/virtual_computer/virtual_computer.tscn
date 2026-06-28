@@ -1,56 +1,129 @@
-[gd_scene load_steps=19 format=3 uid="uid://caul6kq40kc7q"]
+[gd_scene load_steps=50 format=3 uid="uid://caul6kq40kc7q"]
 
 [ext_resource type="Theme" uid="uid://cjkhwtmpbs67l" path="res://virtual_computer/virtual_computer.tres" id="1_jbxin"]
 [ext_resource type="Script" uid="uid://b8w2c5vsn8v3r" path="res://virtual_computer/virtual_computer.gd" id="1_umcnw"]
-[ext_resource type="Texture2D" uid="uid://r3l8ecjk7fa4" path="res://sprites/work_in_progress_placeholder.png" id="2_umcnw"]
 [ext_resource type="Texture2D" uid="uid://bbcn0bke7nquo" path="res://sprites/search_bar.png" id="3_psrw4"]
-[ext_resource type="PackedScene" uid="uid://dfy1xusvwe7hq" path="res://wheel/wheel_options.tscn" id="4_gssdu"]
+[ext_resource type="PackedScene" uid="uid://be7npbtls1cfj" path="res://wheel/wheel_options.tscn" id="4_gssdu"]
 [ext_resource type="Texture2D" uid="uid://cu4o2531xe0vr" path="res://sprites/blank_tab.png" id="4_imrmp"]
+[ext_resource type="Texture2D" uid="uid://civp1de3ky78m" path="res://sprites/window_bar.png" id="4_isn30"]
 [ext_resource type="Texture2D" uid="uid://cemoxupg1h7u1" path="res://sprites/window_signs.png" id="4_k7s0m"]
 [ext_resource type="Texture2D" uid="uid://iwxy34wgm5j4" path="res://sprites/dropdown_icon.png" id="4_lsbh8"]
-[ext_resource type="PackedScene" uid="uid://d3qevb6bpu8dq" path="res://wheel/wheel.tscn" id="4_vn5vm"]
+[ext_resource type="PackedScene" uid="uid://day22k4m782ev" path="res://wheel/wheel.tscn" id="4_vn5vm"]
 [ext_resource type="Texture2D" uid="uid://h25vxs7kucgt" path="res://sprites/office_icon.png" id="5_ndocl"]
 [ext_resource type="Theme" uid="uid://dyalgn1hkhgf0" path="res://themes/casino.tres" id="6_hbh1c"]
 [ext_resource type="Texture2D" uid="uid://bcqnvabrqhlw5" path="res://sprites/casino_icon.png" id="6_lsbh8"]
+[ext_resource type="PackedScene" uid="uid://b7c07812n5hlw" path="res://wheel/details_panel.tscn" id="7_466lp"]
 [ext_resource type="Texture2D" uid="uid://b0lom0ybvul6y" path="res://sprites/user_icon.png" id="7_xow8o"]
+[ext_resource type="FontFile" uid="uid://uorwde0m5i0s" path="res://sprites/fonts/ari-w9500-bold.ttf" id="8_j01aw"]
+[ext_resource type="Texture2D" uid="uid://b2plxlkafhp4o" path="res://sprites/phone_placeholder.png" id="12_2bmdi"]
+[ext_resource type="Texture2D" uid="uid://ugv8kgv744m6" path="res://sprites/clock_placeholder.png" id="13_rxngk"]
+[ext_resource type="Texture2D" uid="uid://dp0ikre2c52on" path="res://sprites/coworker_placeholder.png" id="14_8gimd"]
+[ext_resource type="Texture2D" uid="uid://cqd7116q2u0al" path="res://sprites/coworker_watching_placeholder.png" id="15_b67hs"]
+[ext_resource type="FontFile" uid="uid://cu2refdoqd1hu" path="res://sprites/fonts/ari-w9500-display.ttf" id="15_g374g"]
+[ext_resource type="Resource" uid="uid://dn6ob8c3yy6cx" path="res://wheel/wheel_resources/chump_wheel.tres" id="17_fed85"]
+[ext_resource type="Resource" uid="uid://cf2m1gtgur4m2" path="res://wheel/wheel_resources/risky_business.tres" id="18_kg6si"]
+[ext_resource type="Resource" uid="uid://dp0hkqcnkprve" path="res://wheel/wheel_resources/casual_gambling.tres" id="19_6usfw"]
+[ext_resource type="Resource" uid="uid://bdiu12w7kh7rs" path="res://wheel/wheel_resources/double_or_nothing.tres" id="20_s3ynp"]
+[ext_resource type="Resource" uid="uid://duv1st524cryr" path="res://wheel/wheel_resources/crazy_wheel.tres" id="21_14vyx"]
+[ext_resource type="Resource" uid="uid://jdj20p4kdp22" path="res://wheel/wheel_resources/competitive_gambling.tres" id="22_im7cp"]
+[ext_resource type="Resource" uid="uid://dieb5xme5w4v1" path="res://wheel/wheel_resources/the_check_point.tres" id="23_b58qn"]
+[ext_resource type="Resource" uid="uid://dvu0qors581ta" path="res://wheel/wheel_resources/the_final_gambling.tres" id="24_3mw2b"]
+[ext_resource type="AudioStream" uid="uid://cfwr8nbxgh0oa" path="res://sprites/sounds/the phone the phone is ringing.mp3" id="29_14vyx"]
+[ext_resource type="AudioStream" uid="uid://bn3vb4d8qvfj5" path="res://sprites/sounds/office ambience.mp3" id="29_s3ynp"]
+[ext_resource type="AudioStream" uid="uid://dxe3cyshx6p3y" path="res://sprites/sounds/casino music.mp3" id="31_im7cp"]
+[ext_resource type="Texture2D" uid="uid://c8bv80cp38k1r" path="res://sprites/evil_eye.png" id="32_3mw2b"]
+[ext_resource type="AudioStream" uid="uid://dfslvg3eqjyax" path="res://sprites/sounds/eek.mp3" id="32_b58qn"]
+[ext_resource type="FontFile" uid="uid://dolt1l605mdvm" path="res://sprites/fonts/Pixel Strike.otf" id="33_p4yhl"]
+[ext_resource type="Script" uid="uid://cb7hnjtksc2lp" path="res://virtual_computer/camera_2d.gd" id="35_sl2gw"]
+[ext_resource type="AudioStream" uid="uid://beveiregafs20" path="res://sprites/sounds/lets-go-gambling-win.mp3" id="36_pg3ps"]
 
 [sub_resource type="Theme" id="Theme_vn5vm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_k7s0m"]
-font_size = 12
-font_color = Color(0, 0, 0, 1)
+line_spacing = 2.0
+font = ExtResource("8_j01aw")
+font_size = 11
+font_color = Color(0.74509805, 0.74509805, 0.74509805, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_gssdu"]
-font_color = Color(0, 0, 0, 1)
+font = ExtResource("8_j01aw")
+font_size = 22
+font_color = Color(0.74509805, 0.74509805, 0.74509805, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8gimd"]
+font_size = 11
+font_color = Color(0.74509805, 0.74509805, 0.74509805, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fed85"]
+font_size = 11
+font_color = Color(0.74509805, 0.74509805, 0.74509805, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b67hs"]
+font_size = 11
+font_color = Color(0.74509805, 0.74509805, 0.74509805, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kg6si"]
+font_size = 11
+
+[sub_resource type="LabelSettings" id="LabelSettings_kd2me"]
+font_size = 22
+font_color = Color(0.3647059, 0.89411765, 0.28235295, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g374g"]
+bg_color = Color(0.14901961, 0.14901961, 0.14901961, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [sub_resource type="LabelSettings" id="LabelSettings_psrw4"]
+font_size = 11
 
 [sub_resource type="LabelSettings" id="LabelSettings_imrmp"]
-font_size = 20
+font_size = 22
 font_color = Color(0.27450982, 0.6784314, 0, 1)
 
-[node name="VirtualComputer" type="Node2D"]
-script = ExtResource("1_umcnw")
+[sub_resource type="LabelSettings" id="LabelSettings_isn30"]
+line_spacing = 6.0
+font = ExtResource("15_g374g")
+font_size = 11
 
-[node name="ComputerSprite" type="Sprite2D" parent="."]
+[sub_resource type="LabelSettings" id="LabelSettings_sl2gw"]
+font = ExtResource("33_p4yhl")
+font_size = 64
+font_color = Color(0.74509805, 0.17254902, 0, 1)
+
+[node name="VirtualComputer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_umcnw")
 
 [node name="ComputerBackground" type="ColorRect" parent="."]
 visible = false
+layout_mode = 0
 offset_top = 6.0
 offset_right = 640.0
 offset_bottom = 360.0
+mouse_filter = 2
 
 [node name="Tabs" type="Control" parent="."]
-layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 theme = ExtResource("1_jbxin")
 
 [node name="TabBackground" type="ColorRect" parent="Tabs"]
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 23.0
+mouse_filter = 2
 color = Color(0.80049086, 0.80049074, 0.80049074, 1)
 
 [node name="SearchBar" type="TextureRect" parent="Tabs"]
@@ -58,8 +131,37 @@ layout_mode = 0
 offset_top = 18.0
 offset_right = 640.0
 offset_bottom = 60.0
+mouse_filter = 2
 theme = SubResource("Theme_vn5vm")
 texture = ExtResource("3_psrw4")
+
+[node name="AppBar" type="TextureRect" parent="Tabs/SearchBar"]
+z_index = 1
+layout_mode = 0
+offset_top = 316.0
+offset_right = 640.0
+offset_bottom = 342.0
+mouse_filter = 2
+theme = SubResource("Theme_vn5vm")
+texture = ExtResource("4_isn30")
+
+[node name="TimeLabel" type="Label" parent="Tabs/SearchBar/AppBar"]
+layout_mode = 0
+offset_left = 587.0
+offset_top = 2.0
+offset_right = 807.0
+offset_bottom = 13.0
+text = "9:00 AM"
+label_settings = SubResource("LabelSettings_k7s0m")
+
+[node name="TimeLabel2" type="Label" parent="Tabs/SearchBar/AppBar"]
+layout_mode = 0
+offset_left = 580.0
+offset_top = 14.0
+offset_right = 800.0
+offset_bottom = 25.0
+text = "W/00/RK"
+label_settings = SubResource("LabelSettings_k7s0m")
 
 [node name="WindowCloseSigns" type="TextureRect" parent="Tabs"]
 layout_mode = 0
@@ -67,6 +169,7 @@ offset_left = 592.0
 offset_top = 2.0
 offset_right = 640.0
 offset_bottom = 18.0
+mouse_filter = 2
 texture = ExtResource("4_k7s0m")
 
 [node name="ArrowButton" type="TextureRect" parent="Tabs"]
@@ -75,6 +178,7 @@ offset_left = 4.0
 offset_top = 1.0
 offset_right = 20.0
 offset_bottom = 17.0
+mouse_filter = 2
 texture = ExtResource("4_lsbh8")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Tabs"]
@@ -83,11 +187,13 @@ offset_left = 20.0
 offset_top = -2.0
 offset_right = 316.0
 offset_bottom = 18.0
+mouse_filter = 2
 theme_override_constants/separation = 0
 
 [node name="OfficeTab" type="TextureRect" parent="Tabs/HBoxContainer"]
 custom_minimum_size = Vector2(100, 18)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("4_imrmp")
 
 [node name="OfficeButton" type="Button" parent="Tabs/HBoxContainer/OfficeTab"]
@@ -100,9 +206,10 @@ offset_bottom = 20.0
 [node name="OfficeLabel" type="Label" parent="Tabs/HBoxContainer/OfficeTab"]
 layout_mode = 0
 offset_left = 28.0
-offset_top = 4.0
+offset_top = 8.0
 offset_right = 92.0
-offset_bottom = 27.0
+offset_bottom = 31.0
+mouse_filter = 0
 text = "Office Tab"
 label_settings = SubResource("LabelSettings_k7s0m")
 
@@ -112,10 +219,12 @@ offset_left = 9.0
 offset_top = 7.0
 offset_right = 21.0
 offset_bottom = 19.0
+mouse_filter = 0
 texture = ExtResource("5_ndocl")
 
 [node name="CasinoTab" type="TextureRect" parent="Tabs/HBoxContainer"]
 layout_mode = 2
+mouse_filter = 0
 texture = ExtResource("4_imrmp")
 
 [node name="CasinoButton" type="Button" parent="Tabs/HBoxContainer/CasinoTab"]
@@ -128,9 +237,9 @@ offset_bottom = 20.0
 [node name="CasinoLabel" type="Label" parent="Tabs/HBoxContainer/CasinoTab"]
 layout_mode = 0
 offset_left = 25.0
-offset_top = 4.0
+offset_top = 8.0
 offset_right = 89.0
-offset_bottom = 27.0
+offset_bottom = 31.0
 text = "Casino Tab"
 label_settings = SubResource("LabelSettings_k7s0m")
 
@@ -140,49 +249,232 @@ offset_left = 9.0
 offset_top = 7.0
 offset_right = 21.0
 offset_bottom = 19.0
+mouse_filter = 2
 texture = ExtResource("6_lsbh8")
 
 [node name="OfficePage" type="Control" parent="."]
-layout_mode = 3
 anchors_preset = 0
+mouse_filter = 2
+theme = ExtResource("6_hbh1c")
 
-[node name="WorkInProgress" type="TextureRect" parent="OfficePage"]
+[node name="GracePeriodTimer" type="Timer" parent="OfficePage"]
+one_shot = true
+autostart = true
+
+[node name="ColorRect" type="ColorRect" parent="OfficePage"]
+z_index = -1
 layout_mode = 0
-offset_left = 158.0
-offset_top = 73.000015
-offset_right = 1310.0
-offset_bottom = 793.0
-scale = Vector2(0.34071174, 0.30763894)
-texture = ExtResource("2_umcnw")
+offset_left = -334.0
+offset_top = -161.0
+offset_right = 946.0
+offset_bottom = 592.0
+mouse_filter = 2
 
 [node name="BossBar" type="ProgressBar" parent="OfficePage"]
 layout_mode = 0
-offset_left = 125.0
-offset_top = 123.99999
-offset_right = 151.0
-offset_bottom = 288.0
+offset_left = 569.0
+offset_top = 118.0
+offset_right = 595.0
+offset_bottom = 282.0
+mouse_filter = 2
+theme = ExtResource("6_hbh1c")
+max_value = 10000.0
 fill_mode = 3
 
 [node name="MeterLabel" type="Label" parent="OfficePage"]
 layout_mode = 0
-offset_left = 111.0
-offset_top = 74.0
-offset_right = 165.0
-offset_bottom = 123.0
+offset_left = 540.0
+offset_top = 67.0
+offset_right = 622.0
+offset_bottom = 116.0
 text = "Boss-O
 Meter"
 label_settings = SubResource("LabelSettings_gssdu")
 horizontal_alignment = 1
 
+[node name="OfficeURL" type="Label" parent="OfficePage"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 26.0
+offset_right = 297.0
+offset_bottom = 49.0
+text = "https://www.work.com/youbetterstartworking"
+label_settings = SubResource("LabelSettings_k7s0m")
+
+[node name="TextBox" type="ColorRect" parent="OfficePage"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 113.0
+offset_right = 517.0
+offset_bottom = 297.0
+mouse_filter = 2
+color = Color(0.74509805, 0.74509805, 0.74509805, 1)
+
+[node name="TypingBox" type="TextEdit" parent="OfficePage/TextBox"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = -7.0
+offset_right = 389.0
+offset_bottom = 178.0
+placeholder_text = "Start Typing!"
+wrap_mode = 1
+
+[node name="PhoneIcon" type="TextureRect" parent="OfficePage"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 81.0
+offset_right = 79.0
+offset_bottom = 145.0
+mouse_filter = 2
+texture = ExtResource("12_2bmdi")
+
+[node name="PhoneTimer" type="Timer" parent="OfficePage/PhoneIcon"]
+one_shot = true
+
+[node name="PhoneButton" type="Button" parent="OfficePage/PhoneIcon"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="ClockIcon" type="TextureRect" parent="OfficePage"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 160.0
+offset_right = 105.0
+offset_bottom = 224.0
+mouse_filter = 2
+texture = ExtResource("13_rxngk")
+
+[node name="ClockLabel" type="Label" parent="OfficePage/ClockIcon"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 23.0
+offset_right = 50.0
+offset_bottom = 34.0
+text = "10:00"
+label_settings = SubResource("LabelSettings_8gimd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuotaLabel" type="Label" parent="OfficePage/ClockIcon/ClockLabel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 13.0
+offset_right = 38.0
+offset_bottom = 24.0
+text = "0/5"
+label_settings = SubResource("LabelSettings_8gimd")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckInTimer" type="Timer" parent="OfficePage/ClockIcon"]
+wait_time = 300.0
+one_shot = true
+
+[node name="CoworkerIcon" type="TextureRect" parent="OfficePage"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 236.0
+offset_right = 73.0
+offset_bottom = 300.0
+mouse_filter = 2
+texture = ExtResource("14_8gimd")
+
+[node name="EyeIcon" type="TextureRect" parent="OfficePage/CoworkerIcon"]
+visible = false
+modulate = Color(0.9314187, 0.20490858, 0, 1)
+layout_mode = 0
+offset_left = 19.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 35.0
+mouse_filter = 2
+texture = ExtResource("15_b67hs")
+
+[node name="CoworkerTimer" type="Timer" parent="OfficePage/CoworkerIcon"]
+one_shot = true
+
+[node name="MeterLabel2" type="Label" parent="OfficePage"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 80.0
+offset_right = 518.0
+offset_bottom = 129.0
+text = "Current Shift: 9:00AM - 5:00PM!"
+label_settings = SubResource("LabelSettings_gssdu")
+horizontal_alignment = 1
+
+[node name="MeterLabel2" type="Label" parent="OfficePage/MeterLabel2"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 225.0
+offset_right = 405.0
+offset_bottom = 274.0
+text = "(Enter to submit work once complete!)"
+label_settings = SubResource("LabelSettings_fed85")
+horizontal_alignment = 1
+
+[node name="WordCountLabel" type="Label" parent="OfficePage"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 273.0
+offset_right = 503.0
+offset_bottom = 290.0
+text = "0/250"
+label_settings = SubResource("LabelSettings_b67hs")
+horizontal_alignment = 2
+
+[node name="ColorRect2" type="ColorRect" parent="OfficePage"]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 297.0
+offset_right = 640.0
+offset_bottom = 326.0
+mouse_filter = 2
+color = Color(0.74509805, 0.74509805, 0.74509805, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="OfficePage/ColorRect2"]
+layout_mode = 0
+offset_left = -17.0
+offset_top = -10.0
+offset_right = 96.0
+offset_bottom = 25.0
+mouse_filter = 2
+color = Color(0.88235295, 0.88235295, 0.88235295, 1)
+
+[node name="Label" type="Label" parent="OfficePage/ColorRect2/ColorRect2"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 103.0
+offset_bottom = 14.0
+text = "Goal:"
+label_settings = SubResource("LabelSettings_kg6si")
+
+[node name="Label" type="Label" parent="OfficePage/ColorRect2/ColorRect2/Label"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 12.0
+offset_right = 108.0
+offset_bottom = 34.0
+text = "$100000"
+label_settings = SubResource("LabelSettings_kd2me")
+horizontal_alignment = 2
+
 [node name="CasinoPage" type="Control" parent="."]
-layout_mode = 3
 anchors_preset = 0
+offset_top = -2.0
+offset_bottom = -2.0
+mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="CasinoPage"]
 layout_mode = 0
 offset_top = 60.0
 offset_right = 640.0
 offset_bottom = 360.0
+mouse_filter = 2
 color = Color(0.096204914, 0.096204676, 0.09620475, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CasinoPage"]
@@ -191,109 +483,288 @@ offset_left = 4.0
 offset_top = 67.0
 offset_right = 636.0
 offset_bottom = 359.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CasinoPage/VBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 16
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CasinoPage/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(142, 284)
+custom_minimum_size = Vector2(142, 260)
 layout_mode = 2
+mouse_filter = 0
 
 [node name="WheelList" type="VBoxContainer" parent="CasinoPage/VBoxContainer/HBoxContainer/ScrollContainer"]
 custom_minimum_size = Vector2(128, 292)
 layout_mode = 2
+mouse_filter = 0
 theme_override_constants/separation = 8
 
 [node name="WheelOptions" parent="CasinoPage/VBoxContainer/HBoxContainer/ScrollContainer/WheelList" instance=ExtResource("4_gssdu")]
 layout_mode = 2
+mouse_filter = 2
+wheel_resource = ExtResource("17_fed85")
 
 [node name="WheelOption" parent="CasinoPage/VBoxContainer/HBoxContainer/ScrollContainer/WheelList" instance=ExtResource("4_gssdu")]
 layout_mode = 2
+mouse_filter = 2
+wheel_resource = ExtResource("18_kg6si")
 
 [node name="WheelOption2" parent="CasinoPage/VBoxContainer/HBoxContainer/ScrollContainer/WheelList" instance=ExtResource("4_gssdu")]
 layout_mode = 2
+mouse_filter = 2
+wheel_resource = ExtResource("19_6usfw")
 
 [node name="WheelOption3" parent="CasinoPage/VBoxContainer/HBoxContainer/ScrollContainer/WheelList" instance=ExtResource("4_gssdu")]
 layout_mode = 2
+mouse_filter = 2
+wheel_resource = ExtResource("20_s3ynp")
+
+[node name="WheelOptions2" parent="CasinoPage/VBoxContainer/HBoxContainer/ScrollContainer/WheelList" instance=ExtResource("4_gssdu")]
+layout_mode = 2
+mouse_filter = 2
+wheel_resource = ExtResource("21_14vyx")
+
+[node name="WheelOption4" parent="CasinoPage/VBoxContainer/HBoxContainer/ScrollContainer/WheelList" instance=ExtResource("4_gssdu")]
+layout_mode = 2
+mouse_filter = 2
+wheel_resource = ExtResource("22_im7cp")
+
+[node name="WheelOption5" parent="CasinoPage/VBoxContainer/HBoxContainer/ScrollContainer/WheelList" instance=ExtResource("4_gssdu")]
+layout_mode = 2
+mouse_filter = 2
+wheel_resource = ExtResource("23_b58qn")
+
+[node name="WheelOption6" parent="CasinoPage/VBoxContainer/HBoxContainer/ScrollContainer/WheelList" instance=ExtResource("4_gssdu")]
+layout_mode = 2
+mouse_filter = 2
+wheel_resource = ExtResource("24_3mw2b")
 
 [node name="WheelHome" type="Control" parent="CasinoPage/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(280, 256)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Wheel" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelHome" instance=ExtResource("4_vn5vm")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 4.0
-offset_top = 14.0
-offset_right = 4.0
-offset_bottom = 14.0
+offset_left = -4.0
+offset_top = 1.0
+offset_right = 252.0
+offset_bottom = 257.0
 grow_horizontal = 1
 grow_vertical = 1
 
 [node name="WheelInfo" type="Control" parent="CasinoPage/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme = ExtResource("6_hbh1c")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo"]
 layout_mode = 0
-offset_left = -12.0
+offset_left = -23.0
 offset_top = 2.0
-offset_right = 174.0
+offset_right = 178.0
 offset_bottom = 285.0
+mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(72, 72)
+custom_minimum_size = Vector2(78, 48)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/HBoxContainer/PanelContainer"]
 clip_contents = true
 layout_mode = 2
+mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
 [node name="TextureRect" type="TextureRect" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/HBoxContainer/PanelContainer/ColorRect"]
 layout_mode = 0
-offset_left = 1.0
+offset_left = 4.0
 offset_top = 2.0
-offset_right = 65.0
+offset_right = 68.0
 offset_bottom = 66.0
+mouse_filter = 2
 texture = ExtResource("7_xow8o")
 
 [node name="PanelContainer2" type="PanelContainer" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(110, 40)
+custom_minimum_size = Vector2(116, 20)
 layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g374g")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/HBoxContainer/PanelContainer2"]
 layout_mode = 2
+mouse_filter = 2
 
-[node name="Label" type="Label" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/HBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="Spacing" type="ColorRect" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/HBoxContainer/PanelContainer2/VBoxContainer"]
 layout_mode = 2
-text = " User: ABC"
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="UserLabel" type="Label" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/HBoxContainer/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+text = "User: VrySrsWork"
 label_settings = SubResource("LabelSettings_psrw4")
 
-[node name="Label2" type="Label" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/HBoxContainer/PanelContainer2/VBoxContainer"]
+[node name="MoneyLabel" type="Label" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/HBoxContainer/PanelContainer2/VBoxContainer"]
 layout_mode = 2
-text = " 100000$"
+text = "100000$"
 label_settings = SubResource("LabelSettings_imrmp")
 
 [node name="PanelContainer" type="PanelContainer" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer"]
 custom_minimum_size = Vector2(0, 208)
 layout_mode = 2
+mouse_filter = 2
 theme = ExtResource("6_hbh1c")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/PanelContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/PanelContainer/VBoxContainer"]
+[node name="Spacing" type="ColorRect" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
-text = "Wheel Details:"
+mouse_filter = 2
+
+[node name="NameLabel" type="Label" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Crazy Wheel"
+label_settings = SubResource("LabelSettings_isn30")
 horizontal_alignment = 1
+
+[node name="DetailsPanel" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/PanelContainer/VBoxContainer" instance=ExtResource("7_466lp")]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="DetailsPanel2" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/PanelContainer/VBoxContainer" instance=ExtResource("7_466lp")]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+mouse_filter = 2
+slot = 2
+
+[node name="DetailsPanel3" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/PanelContainer/VBoxContainer" instance=ExtResource("7_466lp")]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+mouse_filter = 2
+slot = 3
+
+[node name="DetailsPanel4" parent="CasinoPage/VBoxContainer/HBoxContainer/WheelInfo/VBoxContainer/PanelContainer/VBoxContainer" instance=ExtResource("7_466lp")]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+mouse_filter = 2
+slot = 4
+
+[node name="ClickyClacky" type="AudioStreamPlayer2D" parent="CasinoPage"]
+position = Vector2(0, 2)
+volume_db = -12.0
+
+[node name="PhoneAudio" type="AudioStreamPlayer2D" parent="CasinoPage"]
+position = Vector2(0, 2)
+stream = ExtResource("29_14vyx")
+volume_db = 5.0
+
+[node name="OfficeSounds" type="AudioStreamPlayer2D" parent="CasinoPage"]
+position = Vector2(0, 2)
+stream = ExtResource("29_s3ynp")
+volume_db = 12.0
+autoplay = true
+
+[node name="CasinoMusic" type="AudioStreamPlayer2D" parent="CasinoPage"]
+position = Vector2(0, 2)
+stream = ExtResource("31_im7cp")
+volume_db = -8.0
+autoplay = true
+
+[node name="CasinoUrl" type="Label" parent="CasinoPage"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 28.0
+offset_right = 279.0
+offset_bottom = 51.0
+text = "https://www.spintowin.com/serious"
+label_settings = SubResource("LabelSettings_k7s0m")
+
+[node name="LostGame" type="Control" parent="."]
+visible = false
+z_index = 10
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="LostGame"]
+layout_mode = 0
+offset_left = -14.0
+offset_top = -19.0
+offset_right = 684.0
+offset_bottom = 364.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="LostGame"]
+modulate = Color(1, 0.23137255, 0, 1)
+layout_mode = 0
+offset_left = 86.0
+offset_top = 2.0
+offset_right = 567.0
+offset_bottom = 280.0
+mouse_filter = 2
+texture = ExtResource("32_3mw2b")
+
+[node name="Label" type="Label" parent="LostGame"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 283.0
+offset_right = 537.0
+offset_bottom = 363.0
+text = "YOU'RE FIRED"
+label_settings = SubResource("LabelSettings_sl2gw")
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="LostGame"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -423.0
+offset_top = -283.0
+offset_right = 1070.0
+offset_bottom = 561.0
+mouse_filter = 2
+color = Color(0.74509805, 0.17254902, 0, 1)
+
+[node name="EEK!" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("32_b58qn")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(320, 180)
+script = ExtResource("35_sl2gw")
+
+[node name="Win" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 8
+layout_mode = 0
+offset_left = -333.0
+offset_top = -248.0
+offset_right = 1023.0
+offset_bottom = 605.0
+mouse_filter = 2
+color = Color(0.3647059, 0.89411765, 0.28235295, 1)
+
+[node name="Oh yea" type="AudioStreamPlayer2D" parent="Win"]
+stream = ExtResource("36_pg3ps")
 
 [connection signal="pressed" from="Tabs/HBoxContainer/OfficeTab/OfficeButton" to="." method="_on_office_button_pressed"]
 [connection signal="pressed" from="Tabs/HBoxContainer/CasinoTab/CasinoButton" to="." method="_on_casino_button_pressed"]
+[connection signal="timeout" from="OfficePage/GracePeriodTimer" to="." method="_on_grace_period_timer_timeout"]
+[connection signal="timeout" from="OfficePage/PhoneIcon/PhoneTimer" to="." method="_on_phone_timer_timeout"]
+[connection signal="pressed" from="OfficePage/PhoneIcon/PhoneButton" to="." method="_on_phone_button_pressed"]
+[connection signal="timeout" from="OfficePage/ClockIcon/CheckInTimer" to="." method="_on_check_in_timer_timeout"]
+[connection signal="timeout" from="OfficePage/CoworkerIcon/CoworkerTimer" to="." method="_on_coworker_timer_timeout"]

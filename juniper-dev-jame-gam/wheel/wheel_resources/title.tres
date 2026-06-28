@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="WheelResource" load_steps=6 format=3 uid="uid://u3dwo8pl45mn"]
+
+[ext_resource type="Texture2D" uid="uid://rw6lescfnjjk" path="res://sprites/red_chip.png" id="1_105mt"]
+[ext_resource type="Texture2D" uid="uid://bi1d5s34gw5c6" path="res://sprites/blue_chip.png" id="2_odbdr"]
+[ext_resource type="Texture2D" uid="uid://bboy8mqvva6iy" path="res://sprites/blank_chip.png" id="3_bm51y"]
+[ext_resource type="Script" uid="uid://8ot61bisegid" path="res://wheel/wheel_resources/wheel_resource.gd" id="4_beaxm"]
+[ext_resource type="Texture2D" uid="uid://df3jkilktubi6" path="res://sprites/home_menu.png" id="5_105mt"]
+
+[resource]
+script = ExtResource("4_beaxm")
+wheel_texture = ExtResource("5_105mt")
+metadata/_custom_type_script = "uid://8ot61bisegid"

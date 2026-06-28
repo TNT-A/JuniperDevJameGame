@@ -4,3 +4,4 @@ extends Button
 
 func _on_pressed() -> void:
 	SignalBus.wheel_changed.emit(wheel_resource)
+	print("hhahahah")

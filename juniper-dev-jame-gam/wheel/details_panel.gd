@@ -1,13 +1,16 @@
 extends Control
+class_name DetailPanel
 
-@onready var color_rect: ColorRect = $ColorRect
+@onready var chip_texture: TextureRect = $ChipTexture
 @onready var details_label: Label = $DetailsLabel
 
-@export var rect_color : Color
-@export var details : String
+@export var slot : int = 0
+@export var wheel_resource : WheelResource
 
 func _ready() -> void:
-	if rect_color:
-		color_rect.color = rect_color
-	if details:
-		details_label.text = details
+	set_resource()
+
+func set_resource():
+	if wheel_resource:
+		chip_texture.texture = wheel_resource.get("detail_texture_" + str(slot))
+		details_label.text = wheel_resource.get("detail_info_" + str(slot))

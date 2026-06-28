@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="WheelResource" load_steps=6 format=3 uid="uid://bdiu12w7kh7rs"]
+
+[ext_resource type="Texture2D" uid="uid://d22cwd4s6ox8s" path="res://sprites/black_chip.png" id="1_qo8jm"]
+[ext_resource type="Texture2D" uid="uid://cvjunp2awchr6" path="res://sprites/green_chip.png" id="2_0yb6e"]
+[ext_resource type="Texture2D" uid="uid://bboy8mqvva6iy" path="res://sprites/blank_chip.png" id="3_gwj8k"]
+[ext_resource type="Script" uid="uid://8ot61bisegid" path="res://wheel/wheel_resources/wheel_resource.gd" id="4_njupx"]
+[ext_resource type="Texture2D" uid="uid://bqhb3mi2wic3" path="res://sprites/double_or_nothing.png" id="5_gwj8k"]
+
+[resource]
+script = ExtResource("4_njupx")
+wheel_texture = ExtResource("5_gwj8k")
+detail_texture_1 = ExtResource("1_qo8jm")
+detail_texture_2 = ExtResource("2_0yb6e")
+detail_info_1 = " = x1/2$"
+detail_info_2 = " = x2$"
+wheel_name = "Double or
+Nothing"
+wheel_price = 25
+num_spins = 8
+spin_time = 7.5
+wheel_results = Array[Array]([["div", 2], ["mult", 2], ["div", 2], ["mult", 2], ["div", 2], ["mult", 2], ["div", 2], ["mult", 2]])
+metadata/_custom_type_script = "uid://8ot61bisegid"

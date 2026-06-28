@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://wl1jrsg0liy0"
+path="res://.godot/imported/hehe gamble.mp3-8d2add472b5cf6333edd276d093d4ee4.mp3str"
+
+[deps]
+
+source_file="res://sprites/sounds/hehe gamble.mp3"
+dest_files=["res://.godot/imported/hehe gamble.mp3-8d2add472b5cf6333edd276d093d4ee4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

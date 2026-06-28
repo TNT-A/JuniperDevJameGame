@@ -1,0 +1,95 @@
+[gd_scene load_steps=6 format=3 uid="uid://cf2gb2mvla732"]
+
+[ext_resource type="Script" uid="uid://bcytxiprqn28l" path="res://win_screen/win_screen.gd" id="1_vgi6e"]
+[ext_resource type="FontFile" uid="uid://dolt1l605mdvm" path="res://sprites/fonts/Pixel Strike.otf" id="1_wruv5"]
+[ext_resource type="Texture2D" uid="uid://df3jkilktubi6" path="res://sprites/home_menu.png" id="3_ket4b"]
+[ext_resource type="AudioStream" uid="uid://c6afquhdqfuj1" path="res://sprites/sounds/cha ching!.mp3" id="3_wpp0q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vgi6e"]
+line_spacing = -16.0
+font = ExtResource("1_wruv5")
+font_size = 64
+outline_size = 24
+outline_color = Color(0, 0, 0, 1)
+
+[node name="WinScreen" type="Node2D"]
+script = ExtResource("1_vgi6e")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -38.0
+offset_top = -14.0
+offset_right = 728.0
+offset_bottom = 392.0
+mouse_filter = 2
+color = Color(0.3647059, 0.89411765, 0.28235295, 1)
+
+[node name="Label" type="Label" parent="."]
+z_index = 3
+offset_left = 42.0
+offset_top = 45.0
+offset_right = 597.0
+offset_bottom = 165.0
+text = "I'M RIIIIICH!"
+label_settings = SubResource("LabelSettings_vgi6e")
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_wpp0q")
+autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 1
+offset_left = -45.0
+offset_top = 503.0
+offset_right = 680.0
+offset_bottom = 975.0
+pivot_offset = Vector2(363, 237)
+mouse_filter = 2
+texture = ExtResource("3_ket4b")
+
+[node name="Button" type="Button" parent="TextureRect"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 733.0
+offset_bottom = 474.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+z_index = 5
+offset_left = -126.0
+offset_top = -58.0
+offset_right = 778.0
+offset_bottom = 478.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label2" type="Label" parent="ColorRect2"]
+z_index = 3
+layout_mode = 0
+offset_left = 168.0
+offset_top = 103.0
+offset_right = 723.0
+offset_bottom = 247.0
+text = "But the cycle
+continued..."
+label_settings = SubResource("LabelSettings_vgi6e")
+horizontal_alignment = 1
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect2"]
+modulate = Color(1, 1, 1, 0)
+z_index = 5
+layout_mode = 0
+offset_left = 50.0
+offset_top = 18.0
+offset_right = 901.0
+offset_bottom = 510.0
+mouse_filter = 2
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="mouse_entered" from="TextureRect" to="." method="_on_texture_rect_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect" to="." method="_on_texture_rect_mouse_exited"]
+[connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]

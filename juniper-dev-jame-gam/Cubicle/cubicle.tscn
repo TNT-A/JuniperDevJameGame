@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://svkcr8ypby1r"]
+[gd_scene load_steps=2 format=3 uid="uid://dtsqwxbrcvffb"]
+
+[ext_resource type="Texture2D" uid="uid://01isjcbffrip" path="res://sprites/cubicle_placeholder.png" id="1_itg6b"]
 
 [node name="Cubicle" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("1_itg6b")
